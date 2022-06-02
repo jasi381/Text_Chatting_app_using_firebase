@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NumberActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:src="@drawable/ic_undraw_login_re_4vu2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:text="Verify Your Phone Number"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/imageView"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We will sent OTP on your number to verify"
+        android:textColor="@color/black"
+        android:layout_below="@+id/textView"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"/>
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:ccpDialog_keyboardAutoPopup="false"
+        app:ccpDialog_textColor="@color/black"
+        app:ccp_arrowSize="20dp"
+        app:ccp_autoDetectLanguage="true"
+        app:ccp_clickable="true"
+        app:ccp_defaultLanguage="ENGLISH"
+        app:ccp_flagBorderColor="@color/black"
+        app:ccp_showFlag="true"
+        app:ccp_showFullName="true"
+        app:ccp_showNameCode="true"
+        app:ccp_showPhoneCode="true"
+        app:ccp_textGravity="LEFT"
+        app:ccp_textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView2"
+        android:layout_toEndOf="@id/ccp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:hint="Enter your Mobile Number"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:textColorHint="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_marginTop="8dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Continue"
+        android:gravity="center"
+        android:backgroundTint="#128C7E"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ccp"
+        android:layout_marginVertical="90dp"
+        />
+
+
+
+
+</RelativeLayout>

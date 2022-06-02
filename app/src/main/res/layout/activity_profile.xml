@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileActivity"
+    android:background = "@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:src="@drawable/ic_chatting"
+        android:id="@+id/userImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+
+    <TextView
+        android:id="@+id/profileInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Profile Info"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profileName_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Please set your Name and Profile Image "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_below="@+id/profileName_img"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Enter Your Name"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            android:id="@+id/userName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continueBtn"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/profileName_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Continue"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>
